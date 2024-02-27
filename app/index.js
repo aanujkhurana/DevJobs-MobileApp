@@ -12,7 +12,21 @@ const Home = () => {
         <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
             <Stack.Screen 
                 options={{
+                    headerTitle:"",
                     headerStyle: {backgroundColor: COLORS.lightWhite},
+                    headerShadowVisible: false,
+                    headerLeft: () => (
+                        <ScreenHeaderBtn 
+                            iconUrl={icons.menu}
+                            dimensions="60%"
+                            onPress={() => console.log('Nearby Jobs')}/>
+                    ),
+                    headerRight: () => (
+                        <ScreenHeaderBtn 
+                            iconUrl={icons.profile}
+                            dimensions="100%"
+                            onPress={() => console.log('Nearby Jobs')}/>
+                    ),
                 }}
             />
         </SafeAreaView>

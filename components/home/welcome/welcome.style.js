@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
   tabsContainer: {
     width: "100%",
     marginTop: SIZES.medium,
+    flexDirection: "row",
+    display: "flex",
   },
   tab: (activeJobType, item) => ({
     paddingVertical: SIZES.small / 2,

@@ -1,12 +1,54 @@
-import React from 'react'
-import { View, Text } from 'react-native'
-
+import React, {useState} from 'react'
+import { View, Text, TextInput, TouchableOpacity, Image, FlatList} from 'react-native'
+import {router, useRouter} from 'expo-router'
 import styles from './welcome.style'
+import {icons, SIZES } from '../../../constants'
+
+const jobtypes = ["Full-Time, Part-Time, Contract"]
 
 const Welcome = () => {
+
+  const [activeJobType, setActiveJobType] = useState("Full-Time")
+
   return (
     <View>
-      <Text>Welcome</Text>
+      <View style={styles.container}>
+        <Text style={styles.userName}>Welcome to DevJobs</Text>
+        <Text style={styles.welcomeMessage}>Find your dream job</Text>
+      </View>
+
+      <View style={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
+          <TextInput 
+          style={styles.searchInput}
+          value=''
+          onChange={() => {}}
+          placeholder='What Jobs are you looking for?'
+          />
+        </View>
+        <TouchableOpacity style={styles.searchBtn} onPress={()=>{}}>
+          <Image 
+          source={icons.search}
+          resizeMode='contain'
+          style={styles.searchBtnImage}
+          />
+        </TouchableOpacity>
+      </View>
+      <View
+      style={styles.tabsContainer}>
+        <FlatList
+        data={jobtypes}
+        renderItem={({item}) => (
+          <TouchableOpacity style={styles.tab(activeJobType, item)} 
+          onPress={()=>{
+            setActiveJobType(item)
+            router.push(`/search/${item}`)
+          }}>
+            <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
+          </TouchableOpacity>
+        )}
+        />
+      </View>
     </View>
   )
 }

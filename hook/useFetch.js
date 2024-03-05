@@ -11,13 +11,17 @@ const useFetch = (endpoint, query) => {
     const [isLoading, setIsLoading] = useState(true);
     const options = {
         method: 'GET',
-        url: `https://jsearch.p.rapidapi.com/${endpoint}`,
-        headers: {
-        'X-RapidAPI-Key': '3efeada1b8msha61a429fd689111p158092jsn0cf6ca0a7d91',
-        'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+        url: 'https://jsearch.p.rapidapi.com/search',
+        params: {
+          query: 'Python developer in Texas, USA',
+          page: '1',
+          num_pages: '1'
         },
-        params: { ...query },
-    };
+        headers: {
+          'X-RapidAPI-Key': 'd6d31f84acmsh2631618d26f055dp14731fjsne12933cb3657',
+          'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+        }
+      };
 
     const fetchData = async () => {
         setError(true);

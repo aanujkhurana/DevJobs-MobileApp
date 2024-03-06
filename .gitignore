@@ -44,3 +44,4 @@ expo-env.d.ts
 .env
 .env.local
 .env.development
+hook/useFetch.js

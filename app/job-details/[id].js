@@ -22,6 +22,18 @@ const jobDetails = () => {
         job_id: params.id,
     });
 
+    const displayTabContent = (tab, data) => {
+        switch (activeTab) {
+            case "Qualification":
+                return <Specifics 
+                    title="Qualifications"
+                    points={data[0].job_highlights?.Qualifications ?? ("N/a")} 
+                    />;
+            default:
+                break;
+        }
+    }
+
     console.log("data", data);
 
     return (
@@ -67,6 +79,7 @@ const jobDetails = () => {
                         activeTab={activeTab}
                         setActiveTab={setActiveTab}
                     />
+                    {displayTabContent()}
                     </View>
                 )}
             </ScrollView>

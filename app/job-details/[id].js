@@ -1,4 +1,4 @@
-import { Stack, useRouter, useGlobalSearchParams } from "expo-router";
+import { Stack, useRouter, useLocalSearchParams } from "expo-router";
 import { useCallback, useState } from "react";
 import {View,Text,SafeAreaView,ScrollView,ActivityIndicator,RefreshControl} from "react-native";
 import {Company,JobAbout,JobFooter,JobTabs,ScreenHeaderBtn,Specifics} from "../../components";
@@ -6,15 +6,19 @@ import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
 
 const jobDetails = () => {
-    const params = useGlobalSearchParams();
+    const params = useLocalSearchParams();
+
     const router = useRouter();
 
     const [refreshing, setRefreshing] = useState(false);
 
     const onRefresh = useCallback(() => {})
-    const { data, isLoading, error, refetch } = useFetch("job-details", {
+
+    const { data, isLoading, refetch } = useFetch("job-details", {
         job_id: params.id,
     });
+
+    console.log("data", data);
 
     return (
         <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -44,12 +48,9 @@ const jobDetails = () => {
             >
                 {isLoading ? (
                     <ActivityIndicator size="large" color={COLORS.primary}/>
-                ) : error ?(
-                    <Text></Text>
-                ): data.length === 0 ? (
+                ) : data === null ? (
                     <Text>No data found</Text>
                 ) : (
-                    console.log(data),
                     <View style={{padding: SIZES.medium, paddingBottom: 100}}>
                     <Company
                         companyLogo={data[0]?.employer_logo}

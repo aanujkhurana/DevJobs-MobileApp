@@ -5,12 +5,16 @@ import {Company,JobAbout,JobFooter,JobTabs,ScreenHeaderBtn,Specifics} from "../.
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
 
+const tabs = ["About", "Qualification", "Responsibilities"];
+
 const jobDetails = () => {
     const params = useLocalSearchParams();
 
     const router = useRouter();
 
     const [refreshing, setRefreshing] = useState(false);
+
+    const [activeTab, setActiveTab] = useState(tabs[0])
 
     const onRefresh = useCallback(() => {})
 
@@ -58,7 +62,11 @@ const jobDetails = () => {
                         companyName={data[0]?.employer_name}
                         location={data[0]?.job_country}
                     />
-                    <JobTabs job={data}/>
+                    <JobTabs
+                        tabs={tabs}
+                        activeTab={activeTab}
+                        setActiveTab={setActiveTab}
+                    />
                     </View>
                 )}
             </ScrollView>

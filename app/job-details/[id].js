@@ -5,7 +5,7 @@ import {Company,JobAbout,JobFooter,JobTabs,ScreenHeaderBtn,Specifics} from "../.
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
 
-const tabs = ["About", "Qualifications", "Responsibilities"];
+const tabs = ["About", "Qualifications", "Responsibilities", "Benefits", "Skills Required"];
 
 const jobDetails = () => {
     const params = useLocalSearchParams();
@@ -24,6 +24,9 @@ const jobDetails = () => {
     const { data, isLoading, refetch } = useFetch("job-details", {
         job_id: params.id,
     });
+
+    console.log(data);
+
     const displayTabContent = () => {
         switch (activeTab) {
           case "Qualifications":
@@ -33,11 +36,11 @@ const jobDetails = () => {
                 points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
               />
             );
-    
-          case "About":
-            return (
-              <JobAbout info={data[0].job_description ?? "No data provided"} />
-            );
+            
+            case "About":
+              return (
+                <JobAbout info={data[0].job_description ?? "No data provided"} />
+              );
     
           case "Responsibilities":
             return (
@@ -46,6 +49,22 @@ const jobDetails = () => {
                 points={data[0].job_highlights?.Responsibilities ?? ["N/A"]}
               />
             );
+
+            case "Benefits":
+                return (
+                  <Specifics
+                    title='Benefits'
+                    points={data[0].job_highlights?.Benefits ?? ["N/A"]}
+                  />
+                );
+
+            case "Skills Required":
+                return (
+                  <Specifics
+                    title='Skills Required'
+                    points={data[0].job_required_skills ?? ["NO INFO"]}
+                  />
+                );
     
           default:
             return null;

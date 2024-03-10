@@ -25,8 +25,6 @@ const jobDetails = () => {
         job_id: params.id,
     });
 
-    console.log(data);
-
     const displayTabContent = () => {
         switch (activeTab) {
           case "Qualifications":
@@ -119,7 +117,7 @@ const jobDetails = () => {
                 )}
             </ScrollView>
             
-            <JobFooter url={data[0]?.job_apply_link ?? 'https://careers.google.com/jobs/results'} />
+            <JobFooter url={ data[0]?.job_apply_link ?? 'https://careers.google.com/jobs/results'} />
             </>
         </SafeAreaView>
     )

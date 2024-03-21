@@ -112,12 +112,11 @@ const jobDetails = () => {
                         activeTab={activeTab}
                         setActiveTab={setActiveTab}
                     />
-                    {displayTabContent()}
+                    { displayTabContent() }
                     </View>
                 )}
             </ScrollView>
-            
-            <JobFooter url={ data[0]?.job_apply_link ?? 'https://careers.google.com/jobs/results'} />
+            <JobFooter url={data && data.length > 0 ? data[0]?.job_apply_link : `https://careers.google.com/jobs/results/` } />
             </>
         </SafeAreaView>
     )

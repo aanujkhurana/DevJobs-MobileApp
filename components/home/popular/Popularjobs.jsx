@@ -38,7 +38,6 @@ const Popularjobs = () => {
         {isLoading ? (
           <ActivityIndicator size="large" color={COLORS.primary} />
         ) : (
-          console.log(data),
           <FlatList
             data={data}
             renderItem={({ item }) => <PopularJobCard

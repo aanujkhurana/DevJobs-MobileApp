@@ -18,9 +18,10 @@ const jobDetails = () => {
 
     const onRefresh = useCallback(() => {
         setRefreshing(true);
-        refetch()
-        setRefreshing(false)
+        refetch();
+        setRefreshing(false);
     }, [])
+    
     const { data, isLoading, refetch } = useFetch("job-details", {
         job_id: params.id,
     });
@@ -74,7 +75,7 @@ const jobDetails = () => {
             <Stack.Screen
                 options={{
                     headerStyle: {backgroundColor: COLORS.lightWhite},
-                    headerShadowVisible: false,
+                    headerboxShadowVisible: false,
                     headerBackVisible: false,
                     headerLeft: () => (
                         <ScreenHeaderBtn

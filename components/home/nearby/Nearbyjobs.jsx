@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator, TouchableOpacity } from 'react-native'
+import { View, Text, ActivityIndicator, Pressable } from 'react-native'
 import { useRouter } from 'expo-router'
 
 import styles from './nearbyjobs.style'
@@ -20,9 +20,9 @@ const Nearbyjobs = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Nearby Jobs</Text>
-        <TouchableOpacity onPress={() => router.push('/popular')}>
+        <Pressable onPress={() => router.push('/popular')}>
           <Text style={styles.headerBtn}>Show All</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
 
       <View style={styles.cardsContainer}>

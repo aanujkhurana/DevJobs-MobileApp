@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, FlatList, Image, TouchableOpacity, View } from 'react-native'
-import { Stack, useRouter, useGlobalSearchParams } from 'expo-router'
+import { ActivityIndicator, FlatList, Image, Pressable, View } from 'react-native'
+import { Stack, useRouter, useGlobalSearchParams } from "expo-router"
 import { Text, SafeAreaView } from 'react-native'
 import axios from 'axios'
 
@@ -26,7 +26,7 @@ const JobSearch = () => {
                 method: "GET",
                 url: `https://jsearch.p.rapidapi.com/search`,
                 headers: {
-                    "X-RapidAPI-Key": '',
+                    "X-RapidAPI-Key": "",
                     "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
                 },
                 params: {
@@ -64,7 +64,7 @@ const JobSearch = () => {
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.lightWhite },
-                    headerShadowVisible: false,
+                    headerboxShadowVisible: false,
                     headerLeft: () => (
                         <ScreenHeaderBtn
                             iconUrl={icons.left}
@@ -103,7 +103,7 @@ const JobSearch = () => {
                 )}
                 ListFooterComponent={() => (
                     <View style={styles.footerContainer}>
-                        <TouchableOpacity
+                        <Pressable
                             style={styles.paginationButton}
                             onPress={() => handlePagination('left')}
                         >
@@ -112,11 +112,11 @@ const JobSearch = () => {
                                 style={styles.paginationImage}
                                 resizeMode="contain"
                             />
-                        </TouchableOpacity>
+                        </Pressable>
                         <View style={styles.paginationTextBox}>
                             <Text style={styles.paginationText}>{page}</Text>
                         </View>
-                        <TouchableOpacity
+                        <Pressable
                             style={styles.paginationButton}
                             onPress={() => handlePagination('right')}
                         >
@@ -125,7 +125,7 @@ const JobSearch = () => {
                                 style={styles.paginationImage}
                                 resizeMode="contain"
                             />
-                        </TouchableOpacity>
+                        </Pressable>
                     </View>
                 )}
             />

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { COLORS, FONT, SHADOWS, SIZES } from "../../../../constants";
+import { COLORS, FONT, boxShadow, SIZES } from "../../../../constants";
 
 const styles = StyleSheet.create({
   container: (selectedJob, item) => ({
@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
     backgroundColor: selectedJob === item.job_id ? COLORS.primary : "#FFF",
     borderRadius: SIZES.medium,
     justifyContent: "space-between",
-    ...SHADOWS.medium,
-    shadowColor: COLORS.white,
+    ...boxShadow.medium,
+    boxShadowColor: COLORS.white,
   }),
   logoContainer: (selectedJob, item) => ({
     width: 50,

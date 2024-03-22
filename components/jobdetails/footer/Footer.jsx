@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, Linking } from 'react-native'
+import { View, Text, Pressable, Image, Linking } from 'react-native'
 
 import { icons } from '../../../constants'
 
@@ -8,18 +8,18 @@ import styles from './footer.style'
 const Footer = ({ url }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.likeBtn}>
+      <Pressable style={styles.likeBtn}>
         <Image 
           source={icons.heartOutline} 
           style={styles.likeBtnImage} 
           resizeMode='contain'
         />
-      </TouchableOpacity>
-      <TouchableOpacity 
+      </Pressable>
+      <Pressable 
         style={styles.applyBtn}
         onPress={() => Linking.openURL(url)}>
         <Text style={styles.applyBtnText}>Apply Job</Text>
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 }

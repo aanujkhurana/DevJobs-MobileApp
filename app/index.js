@@ -15,7 +15,7 @@ const Home = () => {
                 options={{
                     headerTitle:"DevJobs",
                     headerStyle: {backgroundColor: COLORS.lightWhite},
-                    headerShadowVisible: false,
+                    headerboxShadowVisible: false,
                     headerLeft: () => (
                         <ScreenHeaderBtn 
                             iconUrl={icons.menu}

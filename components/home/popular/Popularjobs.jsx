@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator, FlatList, TouchableOpacity } from 'react-native'
+import { View, Text, ActivityIndicator, FlatList, Pressable } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useState } from "react";
 
@@ -29,9 +29,9 @@ const Popularjobs = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Popular Jobs</Text>
-        <TouchableOpacity onPress={() => router.push('/popular')}>
+        <Pressable onPress={() => router.push('/popular')}>
           <Text style={styles.headerBtn}>Show All</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
 
       <View style={styles.cardsContainer}>

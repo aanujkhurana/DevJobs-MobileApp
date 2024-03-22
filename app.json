@@ -17,13 +17,18 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.DevJobs-App"
+      "bundleIdentifier": "com.anonymous.DevJobs-App",
+      "runtimeVersion": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
+      },
+      "package": "com.aanujkhurana.DevJobsApp"
     },
     "web": {
       "bundler": "metro",
@@ -35,6 +40,17 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "c3436704-61b7-4d4d-b053-75e7013b9c53"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c3436704-61b7-4d4d-b053-75e7013b9c53"
     }
   }
 }

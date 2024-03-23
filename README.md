@@ -1,14 +1,24 @@
+  <img src="/screenshots/img11.png"></img>
+
 [![React Native](https://img.shields.io/badge/React%20Native-17.0.2-blue.svg)](https://reactnative.dev/)
 [![Expo](https://img.shields.io/badge/Expo-43.0.0-lightgrey.svg)](https://expo.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-14.17.0-green.svg)](https://nodejs.org/)
 [![Axios](https://img.shields.io/badge/Axios-0.22.0-yellow.svg)](https://axios-http.com/)
 [![Stylesheet](https://img.shields.io/badge/Stylesheet-1.2.0-orange.svg)](https://www.npmjs.com/package/stylesheet)
 
-  <img src="/screenshots/img11.png"></img>
 
 # Cross-Platform Developer Job Search App 📱
 
 This is a mobile application developed using React Native and Expo, aimed at assisting developers in finding job opportunities across various platforms and technologies.
+
+## Table of Contents 📋
+
+1. [Introduction](#Cross-Platform-Developer-Job-Search-App)
+2. [Tech Stack](#tech-stack)
+3. [Features](#features)
+4. [Installation and Setup](#Installation-and-Setupt)
+5. [Screenshots](#Screenshots)
+6. [License](#License)
 
 ## Tech Stack 💻
 
@@ -21,6 +31,31 @@ This is a mobile application developed using React Native and Expo, aimed at ass
 - **Axios**: A promise-based HTTP client for browser and Node.js.
 
 - **Stylesheet**: A utility-first CSS framework for rapidly building custom designs.
+
+## Features 🌈
+
+ **Visually Appealing UI/UX Design**: Develop an aesthetically pleasing user interface using React Native components.
+
+ **Third Party API Integration**: Fetch data from an external API and seamlessly integrate it into the app.
+
+ **Search & Pagination Functionality**: Implement search functionality and pagination for efficient data navigation.
+
+ **Custom API Data Fetching Hooks**:Create custom hooks for streamlined and reusable API data fetching.
+
+ **Dynamic Home Page**: Explore diverse jobs from popular and nearby locations across different categories.
+
+ **Browse with Ease on Explore Page**: Page: Navigate through various jobs spanning different categories and types.
+
+ **Detailed Job Insights**: View comprehensive job details, including application links, salary info, responsibilities, and qualifications.
+
+ **Tailored Job Exploration**: Find jobs specific to a particular title 
+
+ **Robust Loading and Error Management**: Ensure effective handling of loading processes and error scenarios. 
+
+ **Optimized for All Devices**: A responsive design for a seamless user experience across various devices.
+
+and many more, including code architecture and reusability 
+
 
 ## Installation and Setup 🛠️
 

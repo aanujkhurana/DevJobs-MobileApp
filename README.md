@@ -4,6 +4,8 @@
 [![Axios](https://img.shields.io/badge/Axios-0.22.0-yellow.svg)](https://axios-http.com/)
 [![Stylesheet](https://img.shields.io/badge/Stylesheet-1.2.0-orange.svg)](https://www.npmjs.com/package/stylesheet)
 
+  <img src="/screenshots/img11.png"</img>
+
 # Cross-Platform Developer Job Search App 📱
 
 This is a mobile application developed using React Native and Expo, aimed at assisting developers in finding job opportunities across various platforms and technologies.

@@ -1,5 +1,3 @@
-  <img src="/screenshots/img11.png"></img>
-
 [![React Native](https://img.shields.io/badge/React%20Native-17.0.2-blue.svg)](https://reactnative.dev/)
 [![Expo](https://img.shields.io/badge/Expo-43.0.0-lightgrey.svg)](https://expo.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-14.17.0-green.svg)](https://nodejs.org/)
@@ -10,6 +8,9 @@
 # Cross-Platform Developer Job Search App 📱
 
 This is a mobile application developed using React Native and Expo, aimed at assisting developers in finding job opportunities across various platforms and technologies.
+
+  <img src="/screenshots/img11.png"></img>
+
 
 ## Table of Contents 📋
 
